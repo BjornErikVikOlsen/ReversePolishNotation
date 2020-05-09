@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TextField fx:id="textField" onAction="#handleAction" GridPane.columnSpan="6" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#clearPressed" prefWidth="70.0" text="C" GridPane.rowIndex="2" />
+      <Button fx:id="buttonSeven" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="7" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="buttonEight" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="8" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button fx:id="buttonNine" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="9" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#dividePressed" prefWidth="70.0" text="/" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#chsPressed" prefWidth="70.0" text="CHS" GridPane.rowIndex="3" />
+      <Button fx:id="buttonFour" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="4" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="buttonFive" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="5" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Button fx:id="buttonSix" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="6" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#multiplyPressed" prefWidth="70.0" text="*" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#clearPressed" prefWidth="70.0" text="DEL" GridPane.rowIndex="4" />
+      <Button fx:id="buttonOne" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="1" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Button fx:id="buttonTwo" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="2" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Button fx:id="buttonThree" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="3" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" onAction="#minusPressed" prefWidth="70.0" text="-" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" onAction="#enterPressed" prefWidth="70.0" text="Enter" GridPane.rowIndex="5" />
+      <Button fx:id="buttonZero" mnemonicParsing="false" onAction="#numberPressed" prefWidth="70.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="buttonPoint" mnemonicParsing="false" onAction="#pointPressed" prefWidth="70.0" text="." GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" onAction="#plusPressed" prefWidth="70.0" text="+" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Label text="Version 0.1" GridPane.rowIndex="6" />
+      <TextField GridPane.columnSpan="6" />
+   </children>
+</GridPane>
