@@ -18,27 +18,7 @@ public class Controller {
     @FXML
     private TextField textField;
     @FXML
-    private Label label;
-    @FXML
-    private Button buttonZero;
-    @FXML
-    private Button buttonOne;
-    @FXML
-    private Button buttonTwo;
-    @FXML
-    private Button buttonThree;
-    @FXML
-    private Button buttonFour;
-    @FXML
-    private Button buttonFive;
-    @FXML
-    private Button buttonSix;
-    @FXML
-    private Button buttonSeven;
-    @FXML
-    private Button buttonEight;
-    @FXML
-    private Button buttonNine;
+    private TextField textField2;
     @FXML
     private Button buttonPoint;
 
@@ -48,27 +28,9 @@ public class Controller {
     }
     @FXML
     public void numberPressed(ActionEvent e){
-        if(e.getSource() == buttonOne){
-            textField.setText(textField.getText() + "1");
-        } else if (e.getSource() == buttonTwo){
-            textField.setText(textField.getText() + "2");
-        } else if(e.getSource() == buttonThree){
-            textField.setText(textField.getText() + "3");
-        } else if(e.getSource() == buttonFour){
-            textField.setText(textField.getText() + "4");
-        } else if(e.getSource() == buttonFive){
-            textField.setText(textField.getText() + "5");
-        } else if(e.getSource() == buttonSix){
-            textField.setText(textField.getText() + "6");
-        } else if(e.getSource() == buttonSeven){
-            textField.setText(textField.getText() + "7");
-        } else if(e.getSource() == buttonEight){
-            textField.setText(textField.getText() + "8");
-        } else if(e.getSource() == buttonNine){
-            textField.setText(textField.getText() + "9");
-        } else if(e.getSource() == buttonZero){
-            textField.setText(textField.getText() + "0");
-        }
+        String value = ((Button) e.getSource()).getText();
+        textField.setText(textField.getText() + value);
+
     }
     @FXML
     public void pointPressed(ActionEvent e){
@@ -90,6 +52,7 @@ public class Controller {
     @FXML
     public void clearPressed(){
         textField.clear();
+        textField2.clear();
         stack.empty();
     }
     @FXML
@@ -130,16 +93,18 @@ public class Controller {
     }
     @FXML
     public void enterPressed(){
-        stack.push(toDouble(textField.getText()));
-        textField.setText("");
+        if (textField.getText().matches("\\d{0,7}([\\.]\\d{0,4})?") && (!textField.getText().isEmpty())){
+            stack.push(toDouble(textField.getText()));
+            textField2.setText(textField.getText());
+            textField.setText("");
+        } else {
+            System.out.println("Wrong input");
+        }
+
     }
     @FXML
     public void getDisplayValue(){
 
-    }
-    @FXML
-    public void getVersion(){
-        label.setText("0.1");
     }
 
     public double toDouble(String text){
